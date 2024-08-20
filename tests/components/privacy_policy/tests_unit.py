@@ -1,5 +1,6 @@
 """ Tests of privacy policy API
 """
+
 from unittest.case import TestCase
 
 from unittest.mock import Mock, patch

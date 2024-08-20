@@ -1,5 +1,6 @@
 """ Serializers used throughout the Contact Message Rest API
 """
+
 from rest_framework.serializers import ModelSerializer
 
 from core_website_app.components.contact_message.models import ContactMessage

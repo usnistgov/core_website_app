@@ -1,5 +1,6 @@
 """ Account request API
 """
+
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
@@ -177,16 +178,20 @@ def deny(account_request, send_email=True, email_params=None):
             if inline_template:
                 send_mail_api.send_mail(
                     recipient_list=[account_request_email],
-                    subject=email_params.get("subject")
-                    if email_params
-                    else EMAIL_DENY_SUBJECT,
+                    subject=(
+                        email_params.get("subject")
+                        if email_params
+                        else EMAIL_DENY_SUBJECT
+                    ),
                     body=inline_template,
                 )
             else:
                 send_mail_api.send_mail_from_template(
-                    subject=email_params.get("subject")
-                    if email_params
-                    else EMAIL_DENY_SUBJECT,
+                    subject=(
+                        email_params.get("subject")
+                        if email_params
+                        else EMAIL_DENY_SUBJECT
+                    ),
                     recipient_list=[account_request_email],
                     path_to_template="core_website_app/admin/email/request_account_denied.html",
                     context=context,

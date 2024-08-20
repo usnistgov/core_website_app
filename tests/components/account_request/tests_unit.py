@@ -1,5 +1,6 @@
 """ Tests of the account request API
 """
+
 from unittest.case import TestCase
 from unittest.mock import Mock, patch
 

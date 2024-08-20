@@ -1,5 +1,6 @@
 """contact message API
 """
+
 import logging
 from core_website_app import settings
 import core_main_app.utils.notifications.mail as send_mail_api

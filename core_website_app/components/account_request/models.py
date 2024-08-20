@@ -1,5 +1,6 @@
 """ Account requests model
 """
+
 import datetime
 
 from django.core.exceptions import ObjectDoesNotExist

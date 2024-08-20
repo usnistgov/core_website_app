@@ -1,6 +1,7 @@
 """
     Ajax views for the admin part
 """
+
 import json
 
 from django.contrib.admin.views.decorators import staff_member_required

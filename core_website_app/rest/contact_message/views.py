@@ -1,5 +1,6 @@
 """ Rest views for the contact message API
 """
+
 import logging
 
 from django.http import Http404

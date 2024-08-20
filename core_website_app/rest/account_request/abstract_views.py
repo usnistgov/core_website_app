@@ -1,5 +1,6 @@
 """ Abstract view for Account Request
 """
+
 from abc import ABCMeta, abstractmethod
 
 from django.http import Http404

@@ -1,5 +1,6 @@
 """ Admin views
 """
+
 from django.contrib.admin.views.decorators import staff_member_required
 
 import core_website_app.components.account_request.api as account_request_api

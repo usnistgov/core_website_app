@@ -1,5 +1,6 @@
 """ Tests of contact message API
 """
+
 from unittest.case import TestCase
 
 from unittest.mock import Mock, patch
