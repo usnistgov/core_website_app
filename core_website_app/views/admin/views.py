@@ -2,10 +2,12 @@
 """
 
 from django.contrib.admin.views.decorators import staff_member_required
+from django.urls import reverse
 
 import core_website_app.components.account_request.api as account_request_api
 import core_website_app.components.contact_message.api as contact_message_api
 from core_main_app.utils.rendering import admin_render
+from core_website_app.components.account_request import api as website_api
 from core_website_app.settings import (
     EMAIL_DENY_SUBJECT,
     SEND_EMAIL_WHEN_ACCOUNT_REQUEST_IS_DENIED,
@@ -43,7 +45,7 @@ def user_requests(request):
         assets=assets,
         modals=modals,
         context={
-            "requests": requests,
+            "requests": _build_requests_context(requests),
             "send_email_when_account_request_is_denied": SEND_EMAIL_WHEN_ACCOUNT_REQUEST_IS_DENIED,
             "default_email_subject": EMAIL_DENY_SUBJECT,
         },
@@ -81,3 +83,33 @@ def contact_messages(request):
         modals=modals,
         context={"contacts": messages_contact},
     )
+
+
+def _build_requests_context(request_list):
+    """Build context from list of requests
+
+    Args:
+        request_list:
+
+    Returns:
+
+    """
+    return [
+        {
+            "id": request_item.id,
+            "username": request_item.username,
+            "first_name": request_item.first_name,
+            "last_name": request_item.last_name,
+            "email": request_item.email,
+            "date": request_item.date,
+            "edit_url": reverse(
+                "admin:auth_user_change",
+                args=[
+                    website_api._get_user_by_username(
+                        request_item.username
+                    ).id,
+                ],
+            ),
+        }
+        for request_item in request_list
+    ]

@@ -17,8 +17,7 @@
     </tr>
     {% for request in data.requests %}
         <tr id="{{ request.id }}">
-            {# FIXME add link to /admin/auth/user #}
-            <td class="username">{{ request.username }}</td>
+            <td class="username"><a href="{{request.edit_url}}"> {{ request.username }} </a></td>
             <td class="first_name">{{ request.first_name }}</td>
             <td class="last_name">{{ request.last_name }}</td>
             <td class="email">{{ request.email }}</td>

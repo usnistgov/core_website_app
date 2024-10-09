@@ -8,6 +8,8 @@ SERVER_URI = "http://localhost"
 
 INSTALLED_APPS = [
     # Django apps
+    "django.contrib.admin",
+    "django.contrib.messages",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
@@ -48,11 +50,27 @@ LOGGING = {
 }
 ADMINS = [("admin1", "admin1@test.com"), ("admin2", "admin2@test.com")]
 
+MIDDLEWARE = (  # noqa
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+)
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": ["templates"],
         "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "core_main_app.utils.custom_context_processors.domain_context_processor",
+                "django.template.context_processors.i18n",
+            ],
+        },
     },
 ]
 # IN-MEMORY TEST DATABASE
@@ -76,17 +94,13 @@ SEND_EMAIL_WHEN_CONTACT_MESSAGE_IS_RECEIVED = getattr(
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CELERYBEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 
-SEND_EMAIL_WHEN_CONTACT_MESSAGE_IS_RECEIVED = getattr(
-    settings, "SEND_EMAIL_WHEN_CONTACT_MESSAGE_IS_RECEIVED", True
-)
-
 SEND_EMAIL_WHEN_ACCOUNT_REQUEST_IS_ACCEPTED = getattr(
     settings, "SEND_EMAIL_WHEN_ACCOUNT_REQUEST_IS_ACCEPTED", False
 )
 SEND_EMAIL_WHEN_ACCOUNT_REQUEST_IS_DENIED = getattr(
     settings, "SEND_EMAIL_WHEN_ACCOUNT_REQUEST_IS_DENIED", False
 )
-ROOT_URLCONF = "core_website_app.urls"
+ROOT_URLCONF = "tests.urls"
 
 MONGODB_INDEXING = False
 MONGODB_ASYNC_SAVE = False
