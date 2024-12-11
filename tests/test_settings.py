@@ -48,7 +48,10 @@ LOGGING = {
         },
     },
 }
-ADMINS = [("admin1", "admin1@test.com"), ("admin2", "admin2@test.com")]
+WEBSITE_CONTACTS = [
+    ("admin1", "admin1@example.com"),
+    ("admin2", "admin2@example.com"),
+]
 
 MIDDLEWARE = (  # noqa
     "django.contrib.auth.middleware.AuthenticationMiddleware",

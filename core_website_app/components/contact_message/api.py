@@ -66,7 +66,7 @@ def upsert(contact_message):
                     "/contact_message_for_admin.html"
                 )
 
-                send_mail_api.send_mail_to_administrators(
+                send_mail_api.send_mail_to_website_contacts(
                     subject="New Contact Message",
                     path_to_template=template_path,
                     context=context,

@@ -54,7 +54,7 @@ class TestSendEmailContactMessage(TestCase):
         # Assert
         self.assertEqual(len(mail.outbox[0].to), 2)
         self.assertEqual(
-            mail.outbox[0].to, ["admin1@test.com", "admin2@test.com"]
+            mail.outbox[0].to, ["admin1@example.com", "admin2@example.com"]
         )
 
     @patch.object(contact_message_api, "settings")
