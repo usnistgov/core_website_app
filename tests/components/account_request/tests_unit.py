@@ -314,6 +314,18 @@ class TestsAccountRequestGetCount(TestCase):
         self.assertEqual(result, 1)
 
 
+class TestAccountRequestStr(TestCase):
+    """Test Account Request Str"""
+
+    def test_account_request_str(self):
+        """test_account_request_str"""
+        # Arrange
+        username = "user1"
+        account_request = _create_account_request(username)
+        # Assert
+        self.assertEqual(str(account_request), username)
+
+
 def _create_account_request(username="username"):
     """
     Create an AccountRequest object using default parameters

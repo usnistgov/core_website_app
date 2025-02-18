@@ -45,3 +45,11 @@ class AccountRequest(models.Model):
 
         """
         return AccountRequest.objects.all()
+
+    def __str__(self):
+        """Account request as string
+
+        Returns:
+
+        """
+        return self.username

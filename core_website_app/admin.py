@@ -3,7 +3,7 @@
 
 from django.contrib.admin.views.decorators import staff_member_required
 from django.urls import re_path
-
+from django.contrib import admin
 from core_main_app.admin import core_admin_site
 from core_main_app.components.web_page.models import WEB_PAGE_TYPES
 from core_main_app.views.admin.views import WebPageView
@@ -11,6 +11,7 @@ import core_website_app.components.help.api as help_api
 import core_website_app.components.privacy_policy.api as privacy_policy_api
 import core_website_app.components.rules_of_behavior.api as rules_of_behavior_api
 import core_website_app.components.terms_of_use.api as terms_of_use_api
+from core_website_app.components.account_request.models import AccountRequest
 from core_website_app.views.admin import (
     views as admin_views,
     ajax as admin_ajax,
@@ -109,3 +110,5 @@ admin_urls = [
 
 urls = core_admin_site.get_urls()
 core_admin_site.get_urls = lambda: admin_urls + urls
+
+admin.site.register(AccountRequest)
