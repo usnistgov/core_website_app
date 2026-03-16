@@ -1,5 +1,4 @@
-""" Tests of Rules Of Behavior API
-"""
+"""Tests of Rules Of Behavior API"""
 
 from unittest.case import TestCase
 

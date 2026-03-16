@@ -1,5 +1,4 @@
-""" Authentication tests for contact Message REST API
-"""
+"""Authentication tests for contact Message REST API"""
 
 from django.test import SimpleTestCase
 from unittest.mock import patch

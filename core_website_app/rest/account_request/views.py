@@ -1,5 +1,4 @@
-""" rest api views
-"""
+"""rest api views"""
 
 import logging
 

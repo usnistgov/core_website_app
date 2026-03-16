@@ -1,5 +1,4 @@
-""" Rules of behavior page api
-"""
+"""Rules of behavior page api"""
 
 import core_main_app.components.web_page.api as web_page_api
 from core_main_app.commons.exceptions import ApiError

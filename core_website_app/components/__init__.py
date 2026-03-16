@@ -1,2 +1,1 @@
-""" Components list
-"""
+"""Components list"""

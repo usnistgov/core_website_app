@@ -1,5 +1,4 @@
-""" Setup core website app
-"""
+"""Setup core website app"""
 
 from os import chdir, pardir
 from os.path import join, exists, dirname, normpath, abspath

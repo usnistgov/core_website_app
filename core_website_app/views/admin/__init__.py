@@ -1,2 +1,1 @@
-""" Admin views
-"""
+"""Admin views"""

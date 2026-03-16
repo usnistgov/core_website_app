@@ -1,5 +1,4 @@
-""" Contact messages models
-"""
+"""Contact messages models"""
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models

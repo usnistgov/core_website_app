@@ -1,5 +1,5 @@
 """
-    Ajax views for the admin part
+Ajax views for the admin part
 """
 
 import json

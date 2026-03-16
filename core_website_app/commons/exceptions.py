@@ -1,5 +1,5 @@
 """
-    Core website exceptions
+Core website exceptions
 """
 
 

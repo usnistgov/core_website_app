@@ -1,2 +1,1 @@
-""" Help page
-"""
+"""Help page"""

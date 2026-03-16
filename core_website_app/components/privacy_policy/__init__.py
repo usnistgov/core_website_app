@@ -1,2 +1,1 @@
-""" Privacy policy page
-"""
+"""Privacy policy page"""

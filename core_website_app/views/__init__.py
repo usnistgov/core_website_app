@@ -1,2 +1,1 @@
-""" Web views
-"""
+"""Web views"""

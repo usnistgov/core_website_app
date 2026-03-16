@@ -1,5 +1,4 @@
-""" Rest views for the contact message API
-"""
+"""Rest views for the contact message API"""
 
 import logging
 

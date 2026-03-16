@@ -1,5 +1,4 @@
-""" Tests of Terms Of Use API
-"""
+"""Tests of Terms Of Use API"""
 
 from unittest.case import TestCase
 

@@ -1,5 +1,4 @@
-""" Type of WebPages
-"""
+"""Type of WebPages"""
 
 from core_main_app.commons.enums import WEB_PAGE_TYPES
 

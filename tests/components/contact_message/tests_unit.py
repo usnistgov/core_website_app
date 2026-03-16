@@ -1,5 +1,4 @@
-""" Tests of contact message API
-"""
+"""Tests of contact message API"""
 
 from unittest.case import TestCase
 

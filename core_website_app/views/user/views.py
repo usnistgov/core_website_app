@@ -1,5 +1,4 @@
-""" Views available for the user
-"""
+"""Views available for the user"""
 
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password

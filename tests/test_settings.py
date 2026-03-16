@@ -1,5 +1,4 @@
-"""  Test settings
-"""
+"""Test settings"""
 
 from django.conf import settings
 

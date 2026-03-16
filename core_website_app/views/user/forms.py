@@ -1,5 +1,4 @@
-""" Form needed for the user part of everything
-"""
+"""Form needed for the user part of everything"""
 
 from captcha.fields import CaptchaField
 from django import forms

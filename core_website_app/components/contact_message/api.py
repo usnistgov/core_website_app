@@ -1,12 +1,10 @@
-"""contact message API
-"""
+"""contact message API"""
 
 import logging
 from core_website_app import settings
 import core_main_app.utils.notifications.mail as send_mail_api
 from core_main_app.commons import exceptions
 from core_website_app.components.contact_message.models import ContactMessage
-
 
 logger = logging.getLogger("core_website_app.components.contact_message.api")
 

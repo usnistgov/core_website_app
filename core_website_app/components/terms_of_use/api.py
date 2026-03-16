@@ -1,5 +1,4 @@
-""" Terms of use api
-"""
+"""Terms of use api"""
 
 import core_main_app.components.web_page.api as web_page_api
 from core_main_app.commons.exceptions import ApiError

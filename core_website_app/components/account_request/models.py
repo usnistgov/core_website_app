@@ -1,5 +1,4 @@
-""" Account requests model
-"""
+"""Account requests model"""
 
 import datetime
 

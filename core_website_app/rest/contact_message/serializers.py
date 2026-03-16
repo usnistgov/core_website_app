@@ -1,5 +1,4 @@
-""" Serializers used throughout the Contact Message Rest API
-"""
+"""Serializers used throughout the Contact Message Rest API"""
 
 from rest_framework.serializers import ModelSerializer
 

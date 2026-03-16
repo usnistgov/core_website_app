@@ -1,5 +1,4 @@
-""" Tests of privacy policy API
-"""
+"""Tests of privacy policy API"""
 
 from unittest.case import TestCase
 

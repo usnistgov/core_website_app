@@ -1,5 +1,4 @@
-"""Custom context processor
-"""
+"""Custom context processor"""
 
 from django.conf import settings
 

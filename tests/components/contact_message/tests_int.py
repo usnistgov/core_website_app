@@ -1,5 +1,4 @@
-"""  Test send mail
-"""
+"""Test send mail"""
 
 from django.core import mail
 from django.test import TestCase, override_settings

@@ -1,2 +1,1 @@
-""" REST API views
-"""
+"""REST API views"""

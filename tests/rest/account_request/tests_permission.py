@@ -1,5 +1,4 @@
-""" Authentication tests for Account Request REST API
-"""
+"""Authentication tests for Account Request REST API"""
 
 from django.test import SimpleTestCase
 from unittest.mock import patch

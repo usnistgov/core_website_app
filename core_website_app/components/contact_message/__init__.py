@@ -1,2 +1,1 @@
-""" Contact messages object
-"""
+"""Contact messages object"""
